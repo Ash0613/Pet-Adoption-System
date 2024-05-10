@@ -1,0 +1,42 @@
+body {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    /* Adjust as needed */
+    background-color: azure;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service img {
+    max-width: 50px;
+    /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.service div {
+    display: flex;
+    flex-direction: column;
+}

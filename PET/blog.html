@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <style>
+        body {
+            font-family: "Lucida Console", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e4e4e4;
+
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        form {
+            background-color: rgb(79, 79, 79);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            margin-left: 60vh;
+            background-color: #a8a8a8;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #blogPosts {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 90px;
+        }
+
+        .post {
+            background-color: #d5d5d5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border: 2px solid #262626;
+
+        }
+
+        .post:hover {
+            transform: scale(1.03);
+        }
+
+        .post h2 {
+            color: #4b4b4b;
+            margin-bottom: 10px;
+        }
+
+        .post p {
+            color: #4c4c4c;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .post button {
+            background-color: #ff5c5c;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 14px;
+        }
+
+        .post button:hover {
+            background-color: #e74c3c;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: rgb(37, 27, 27);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 10px;
+            clear: both;
+        }
+
+        .paw {
+            width: 20px;
+            /* Set the desired width */
+            height: auto;
+            /* Maintain aspect ratio */
+            vertical-align: middle;
+            /* Align the image vertically with text */
+        }
+    </style>
+</head>
+
+<body>
+    <img class="hero-image" src="images/health.jpg" alt="Hero Image">
+    <h1><img class="paw" src="images/paw.png" alt="paw" /> Health & Wellness Blog <img class="paw" src="images/paw.png"
+            alt="paw" />
+    </h1>
+
+    <!-- Form to submit a new blog post -->
+    <form id="blogForm">
+        <label for="author">Author's Name:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <button type="button" onclick="submitPost()">Submit</button>
+    </form>
+
+
+    <!-- Display submitted blog posts -->
+    <div id="blogPosts"></div>
+
+    <script>
+        function submitPost() {
+            const author = document.getElementById('author').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            if (!author || !title || !content) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Get existing posts from local storage or initialize an empty array
+            const existingPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            // Add the new post to the array with the current date and time
+            const now = new Date();
+            const newPost = {
+                author,
+                title,
+                content,
+                date: now.toLocaleDateString(),
+                time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            };
+            existingPosts.push(newPost);
+
+            // Save the updated array back to local storage
+            localStorage.setItem('blogPosts', JSON.stringify(existingPosts));
+
+            // Display the submitted blog post
+            displayPosts();
+
+            // Clear the form
+            document.getElementById('blogForm').reset();
+        }
+
+        function displayPosts() {
+            const blogPostsContainer = document.getElementById('blogPosts');
+            blogPostsContainer.innerHTML = '';
+
+            // Retrieve posts from local storage
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            // Display each post with a delete button
+            posts.forEach((post, index) => {
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('post');
+                postDiv.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>By ${post.author} on ${post.date} at ${post.time}</p>
+                    <p>${post.content}</p>
+                    <button onclick="deletePost(${index})">Delete</button>
+                `;
+                blogPostsContainer.appendChild(postDiv);
+            });
+        }
+
+        function deletePost(index) {
+            // Retrieve posts from local storage
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            // Remove the post at the specified index
+            posts.splice(index, 1);
+
+            // Save the updated array back to local storage
+            localStorage.setItem('blogPosts', JSON.stringify(posts));
+
+            // Display the remaining blog posts
+            displayPosts();
+        }
+
+        // Load existing blog posts when the page loads
+        displayPosts();
+    </script>
+    <footer>
+        <div>
+            <a href="#" style="color: rgb(23, 22, 22); margin: 0 10px;">
+                <img src="images/insta.png" alt="Instagram" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(16, 15, 15); margin: 0 10px;">
+                <img src="images/fb.png" alt="Facebook" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(10, 10, 10); margin: 0 10px;">
+                <img src="images/wa.png" alt="Whatsapp" style="width: 20px; height: 20px;">
+            </a>
+            <br>
+        </div>
+        <div>
+            All rights reserved.
+        </div>
+        <div>
+            1234 Main Street, Karnataka, India
+        </div>
+    </footer>
+</body>
+
+</html>

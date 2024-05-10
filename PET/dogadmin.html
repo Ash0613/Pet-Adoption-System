@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://i.pinimg.com/originals/87/6a/72/876a72f1a3787ea857860c3b0aa87e97.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+
+        }
+
+        .container {
+            align-self: center;
+            width: 70vh;
+            margin-right: 10px;
+            background-color: rgb(6, 5, 5);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 40px 0 black;
+            border-radius: 20px;
+            color: aliceblue;
+            height: 90vh;
+        }
+
+        .container {
+            opacity: 0.9;
+
+        }
+
+
+
+
+        .box {
+            border-radius: 20px;
+            border-color: none;
+            margin-left: 5px;
+        }
+
+        .form {
+            margin: 10px 0;
+            align-self: center;
+
+
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: small;
+        }
+
+        input {
+            width: 140px;
+        }
+
+
+        button[type="submit"] {
+            background-color: #3a4f66;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3a4f66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+
+
+        button[type="close"] {
+            background-color: #3a4f66;
+
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+        }
+
+        button[type="close"]:hover {
+            background-color: #80648b;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .close {
+            float: right;
+
+        }
+
+        .active {
+            text-decoration: none;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="POST" action="dogadmin.php" enctype="multipart/form-data">
+            <h2>Add Dog Information</h2>
+            <div class="form">
+                <label for="dogImage">Dog Image:</label>
+                <input class="box" type="file" id="dog_image" name="dog_image" accept="image/*" required>
+            </div>
+            <div class="form">
+                <label for="dogName">Dog Name:</label>
+                <input class="box" type="text" id="dog_name" name="dog_name" required>
+            </div>
+            <div class="form">
+                <label for="breed">Breed:</label>
+                <input class="box" type="text" id="dog_breed" name="dog_breed" required>
+            </div>
+            <div class="form">
+                <label for="age">Age:</label>
+                <input class="box" type="text" id="dog_age" name="dog_age" required>
+            </div>
+            <div class="form">
+                <label for="dogGender">Dog Gender:</label>
+                <select id="dog_gender" name="dog_gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="healthCondition">Health Condition:</label>
+                <input class="box" type="text" id="dog_health_condition" name="dog_health_condition" required>
+            </div>
+            <div class="form">
+                <label for="details">Details:</label>
+                <input class="box" type="text" id="dog_details" name="dog_details" required>
+            </div>
+
+            <button type="submit" name="addDog">Add Dog</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

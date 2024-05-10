@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="close" action="initial.html">
+            <button type="close">
+                <a type="close" class="active" href="initial.html">X</a>
+            </button>
+        </div>
+        <form method="POST" action="check.php">
+            <h2>Sign Up</h2>
+            <div class="form">
+                <label for="email">Email:</label>
+                <input class="box" type="email" id="email" name="email" required>
+            </div>
+            <div class="form">
+                <label for="username">Username:</label>
+                <input class="box" type="text" id="username" name="username" required>
+            </div>
+            <div class="form">
+                <label for="pswd">Password:</label>
+                <input class="box" type="password" id="pswd" name="pswd" required>
+            </div>
+            <div class="form1">
+                <label for="phno">Phone Number:</label>
+                <input class="box" type="tel" id="phno" name="phno" required>
+            </div>
+
+            <div class="form1">
+                <label for="addr">Address:</label>
+                <input class="box" type="text" id="addr" name="addr" required>
+            </div>
+            <button type="submit" name="signup">Sign Up</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

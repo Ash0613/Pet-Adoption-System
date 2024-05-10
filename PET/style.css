@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/pawprint.jpg');
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust to cover the full viewport height */
+}
+
+
+.container {
+    align-self: center;
+    width: 50vh;
+    margin-right: 10px;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid grey;
+    border-radius: 20px;
+    color: aliceblue;
+    height: 60vh;
+}
+
+.container {
+    opacity: 0.9;
+
+}
+
+
+
+
+.box {
+    border-radius: 20px;
+    border-color: none;
+    margin-left: 5px;
+}
+
+.form {
+    margin: 10px 0;
+    align-self: center;
+    margin-top: 20px;
+
+
+
+}
+
+.cont {
+    margin-top: 50px;
+}
+
+
+
+
+
+label {
+    display: block;
+
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    width: 200px;
+}
+
+
+button[type="submit"] {
+    background-color: #afb0b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a4f66;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+
+button[type="close"] {
+    background-color: #3a4f66;
+
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+button[type="close"]:hover {
+    background-color: #80648b;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.close {
+    float: right;
+
+}
+
+.active {
+    text-decoration: none;
+    color: white;
+
+}

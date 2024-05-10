@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Pet Adoption Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        header {
+            background-image: url('https://img.freepik.com/free-photo/front-view-beautiful-dog-with-copy-space_23-2148786562.jpg?w=1380&t=st=1701521829~exp=1701522429~hmac=8373c1546cd3cd2e399c986c55093a9d1a7cf803d62141d64d67875b2f88a7b0');
+            /* Replace 'hero_image.jpg' with your actual image file */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            /* Adjust the height as needed */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            margin-top: 20px;
+
+
+        }
+
+
+        footer {
+            margin-top: 50px;
+            background-color: rgb(37, 27, 27);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 10px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CONTACT US</h1>
+        <p>Find your new furry friend and give them a forever home!</p>
+    </header>
+
+    <div class="contact-info">
+        <div>
+            <img src="images/home-address.png" alt="Address Logo" class="logo">
+            <p>123 Main Street, Cityville</p>
+        </div>
+        <div>
+            <img src="images/phone-call.png" alt="Phone Logo" class="logo">
+            <p>+91-9854622378</p>
+        </div>
+        <div>
+            <img src="images/gmail.png" alt="Email Logo" class="logo">
+            <p><a href="mailto:info@petadoption.com">info@petadoption.com</a></p>
+        </div>
+    </div>
+    <h2>WANT TO KNOW MORE?</h2>
+    <h2>REACH TO US</h2>
+    <form action="contact.php" method="post">
+        <label for="namee">Name:</label>
+        <input type="text" id="namee" name="namee" placeholder="Your Name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    <footer>
+        <div>
+            <a href="#" style="color: rgb(19, 18, 18); margin: 0 10px;">
+                <img src="images/insta.png" alt="Instagram" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(23, 22, 22); margin: 0 10px;">
+                <img src="images/fb.png" alt="Facebook" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(16, 15, 15); margin: 0 10px;">
+                <img src="images/wa.png" alt="Whatsapp" style="width: 20px; height: 20px;">
+            </a>
+            <br>
+        </div>
+        <div>
+            All rights reserved.
+        </div>
+        <div>
+            1234 Main Street, Karnataka, India
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://i.pinimg.com/originals/87/6a/72/876a72f1a3787ea857860c3b0aa87e97.jpg");
+            background-size: cover;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(37, 27, 27);
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            margin-top: 80px;
+            margin-left: 20px;
+
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+
+
+
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+
+        }
+
+        .box1 {
+            background-color: rgb(37, 27, 27);
+            color: #f1f1f1;
+            text-align: center;
+            max-width: 250px;
+            margin-top: 13%;
+            margin-left: 25%;
+            border-radius: 20px;
+            border-color: rgb(8, 7, 7);
+            border-width: 3px;
+            border-style: solid;
+
+
+
+        }
+
+        .box1 img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+
+
+        }
+
+        .box1 p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+
+        .box2 {
+            background-color: rgb(37, 27, 27);
+            color: #f1f1f1;
+            text-align: center;
+            max-width: 250px;
+            margin-top: 13%;
+            margin-left: 5%;
+            border-radius: 20px;
+            border-color: rgb(8, 7, 7);
+            border-width: 3px;
+            border-style: solid;
+
+
+
+        }
+
+        .box2 img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+
+
+        }
+
+        .box2 p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+
+        .box3 {
+            background-color: rgb(37, 27, 27);
+            color: #f1f1f1;
+            text-align: center;
+            max-width: 250px;
+            margin-top: 13%;
+            margin-left: 5%;
+            border-radius: 20px;
+            border-color: rgb(8, 7, 7);
+            border-width: 3px;
+            border-style: solid;
+
+
+
+        }
+
+        .box3 img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+
+
+        }
+
+        .box3 p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+
+
+        .dco {
+            display: flex;
+            opacity: 0.9;
+            margin-bottom: 40vh;
+
+
+
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(37, 27, 27);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="blog.html">Health & Wellness</a>
+        <a href="thenndnow1.php">Then & Now</a>
+        <a href="aboutus.html">About</a> >
+        <a href="contactus.html">Contact</a>
+    </div>
+    <div class="dco">
+        <div class="box1" onclick="navigateToDogs()">
+            <img src="https://i.pinimg.com/originals/be/bb/8b/bebb8beef744775e7e0adbc9a2e6845b.jpg" alt="Image">
+            <p>Dogs</p>
+        </div>
+        <div class="box2" onclick="navigateToCats()">
+            <img src="https://images.unsplash.com/photo-1567507968014-cd038413b9f5?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt="Image">
+            <p>Cats</p>
+        </div>
+        <div class="box3" onclick="navigateToPets()">
+            <img src="https://www.lonetreevet.com/blog/wp-content/uploads/2017/02/LoneTree_iStock-106396236-1024x724.jpg"
+                alt="Image">
+            <p>Other Animals</p>
+        </div>
+    </div>
+    <footer style="background-color: rgb(37, 27, 27); color: white; text-align: center; padding: 20px;font-size:10px">
+        <div>
+
+            <a href="#" style="color: rgb(47, 46, 46); margin: 0 10px;">
+                <img src="images/insta.png" alt="Instagram" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(17, 17, 17); margin: 0 10px;">
+                <img src="images/fb.png" alt="Facebook" style="width: 20px; height: 20px;">
+            </a>
+            <a href="#" style="color: rgb(17, 17, 17); margin: 0 10px;">
+                <img src="images/wa.png" alt="Whatsapp" style="width: 20px; height: 20px;">
+            </a>
+            <br>
+        </div>
+        <div>
+            All rights reserved.
+        </div>
+        <div>
+            1234 Main Street, Karnataka,India
+        </div>
+    </footer>
+
+    <script>
+        function navigateToDogs() {
+            window.location.href = "dogs.php";
+        }
+        function navigateToCats() {
+            window.location.href = "cats.php";
+        }
+        function navigateToPets() {
+            window.location.href = "others.php";
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://i.pinimg.com/originals/87/6a/72/876a72f1a3787ea857860c3b0aa87e97.jpg");
+            background-size: cover;
+        }
+
+        .dco {
+            display: flex;
+            opacity: 0.9;
+            margin-left: 15%;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(37, 27, 27);
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            margin-top: 70px;
+            margin-left: 35px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+
+        .box {
+            background-color: rgb(37, 27, 27);
+            color: #f1f1f1;
+            margin-left: 10%;
+            text-align: center;
+            max-width: 250px;
+            border-radius: 20px;
+            border-color: rgb(8, 7, 7);
+            border-width: 3px;
+            border-style: solid;
+            margin-top: 13%;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .box p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="blog.html">Health & Wellness</a>
+        <a href="thenndnow1.php">Then & Now</a>
+        <a href="contacted1.php">Contact</a>
+        <a href="adminadoptform.php">Adoption Forms</a>
+
+    </div>
+
+    <div class="dco">
+        <div class="box" onclick="navigateToDogs()">
+            <img src="https://i.pinimg.com/originals/be/bb/8b/bebb8beef744775e7e0adbc9a2e6845b.jpg" alt="Image">
+            <p>Dogs</p>
+        </div>
+        <div class="box" onclick="navigateToCats()">
+            <img src="https://images.unsplash.com/photo-1567507968014-cd038413b9f5?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt="Image">
+            <p>Cats</p>
+        </div>
+        <div class="box" onclick="navigateToPets()">
+            <img src="https://www.lonetreevet.com/blog/wp-content/uploads/2017/02/LoneTree_iStock-106396236-1024x724.jpg"
+                alt="Image">
+            <p>Other Animals</p>
+        </div>
+    </div>
+
+    <script>
+        function navigateToDogs() {
+            window.location.href = "dogadmin.html";
+        }
+
+        function navigateToCats() {
+            window.location.href = "catadmin.html";
+        }
+
+        function navigateToPets() {
+            window.location.href = "otheradmin.html";
+        }
+    </script>
+</body>
+
+</html>

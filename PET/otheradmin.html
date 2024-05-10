@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://i.pinimg.com/originals/87/6a/72/876a72f1a3787ea857860c3b0aa87e97.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            align-self: center;
+            width: 70vh;
+            margin-right: 10px;
+            background-color: rgb(10, 10, 10);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 40px 0 black;
+            border-radius: 20px;
+            color: aliceblue;
+            height: 90vh;
+        }
+
+        .container {
+            opacity: 0.9;
+        }
+
+        .box {
+            border-radius: 20px;
+            border-color: none;
+            margin-left: 5px;
+        }
+
+        .form {
+            margin: 10px 0;
+            align-self: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: small;
+        }
+
+        input {
+            width: 140px;
+        }
+
+        button[type="submit"] {
+            background-color: #3a4f66;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3a4f66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="close"] {
+            background-color: #3a4f66;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="close"]:hover {
+            background-color: #80648b;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close {
+            float: right;
+        }
+
+        .active {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="POST" action="otheradmin.php" enctype="multipart/form-data">
+            <h2>Add Pet Information</h2>
+            <div class="form">
+                <label for="otherImage">Pet Image:</label>
+                <input class="box" type="file" id="other_image" name="other_image" accept="image/*" required>
+            </div>
+            <div class="form">
+                <label for="otherName">Pet Name:</label>
+                <input class="box" type="text" id="other_name" name="other_name" required>
+            </div>
+            <div class="form">
+                <label for="breed">Breed:</label>
+                <input class="box" type="text" id="other_breed" name="other_breed" required>
+            </div>
+            <div class="form">
+                <label for="age">Age:</label>
+                <input class="box" type="text" id="other_age" name="other_age" required>
+            </div>
+            <div class="form">
+                <label for="otherGender"> Gender:</label>
+                <select id="other_gender" name="other_gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="healthCondition">Health Condition:</label>
+                <input class="box" type="text" id="other_health_condition" name="other_health_condition" required>
+            </div>
+            <div class="form">
+                <label for="details">Details:</label>
+                <input class="box" type="text" id="other_details" name="other_details" required>
+            </div>
+
+            <button type="submit" name="addOther">Add Other</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

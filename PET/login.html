@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="POST" action="log.php">
+            <h1>Login</h1>
+            <div class="cont">
+                <div class="form">
+                    <label for="email">Email:</label>
+                    <input class="box" type="email" id="email" name="email">
+                </div>
+                <div class="form">
+                    <label for="username">Username:</label>
+                    <input class="box" type="text" id="username" name="username" required>
+                </div>
+                <div class="form">
+                    <label for="pswd">Password:</label>
+                    <input class="box" type="password" id="pswd" name="pswd" required>
+                </div>
+                <button type="submit" name="login">Login</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
